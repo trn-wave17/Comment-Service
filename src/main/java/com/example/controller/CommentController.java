@@ -25,6 +25,7 @@ import com.example.service.CommentService;
 @RequestMapping("/api")
 public class CommentController {
 	private static Logger logger=LoggerFactory.getLogger(CommentController.class);
+	
 	@Autowired
 	CommentService fs;
 	

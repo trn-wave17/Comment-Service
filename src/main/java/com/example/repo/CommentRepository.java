@@ -10,6 +10,6 @@ import com.example.model.Comment;
 
 @CrossOrigin(origins = "*")
 public interface CommentRepository extends MongoRepository<Comment, String>{
-	public List<Comment> findBysongId(String songId);
+	public List<Comment> findBySongName(String songName);
 	public Comment deleteByCommentId(int commentId);
 }

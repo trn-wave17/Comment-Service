@@ -11,8 +11,9 @@ import org.springframework.stereotype.Service;
 import com.example.model.Comment;
 
 import com.example.repo.CommentRepository;
+
 @Service
-public abstract class CommentServiceImpl implements CommentService{
+public class CommentServiceImpl implements CommentService{
 	private static Logger logger=LoggerFactory.getLogger(CommentServiceImpl.class);
 	@Autowired
 	CommentRepository fr;
@@ -25,9 +26,9 @@ public abstract class CommentServiceImpl implements CommentService{
 		return fr.save(c);
 	}
 	@Override
-	public List<Comment> getAllCommentBysongId(String songId) {
+	public List<Comment> getAllCommentBysongId(String songName) {
 	
-				List<Comment> o=fr.findBysongId(songId);
+				List<Comment> o=fr.findBySongName(songName);
 				
 				if(!o.isEmpty())
 				{
